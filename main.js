@@ -19,6 +19,7 @@ btnPrimary.addEventListener("click", (e) => {
     "fadeInAnimation ease 2s";
   document.querySelector(".carousel").style.animationIterationCount = "1";
   document.querySelector(".carousel").style.animationFillMode = "forwards";
+  document.querySelector(".question_container").style.display = "block";
 });
 
 skip.addEventListener("click", (e) => {

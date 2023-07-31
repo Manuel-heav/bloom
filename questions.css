@@ -336,11 +336,15 @@ input[type="file"] {
 }
 
 .question_container{
-    width: 98%;
+    width: 100%;
 }
 
 .carousel{
-    padding: 20px;
+}
+
+.slider{
+  padding: 40px;
+
 }
 
 #msform input{
