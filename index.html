@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom | Home</title>
+    <link rel="stylesheet" class="style_file" href="style.css">
+    <link rel="stylesheet" href="questions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;800&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+</style>
+<body>
+    
+    <header id="main-header">
+        <h1>Bloom</h1>
+    </header>
+    <div class="container">
+        <video autoplay loop muted plays-inline class="background">
+            <source src="./assets/video5.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <h1>Bloom - <span id="smaller">Where Art Meets Web</span></h1>
+            <p>Redefine your online presence with captivating web designs that leave a lasting digital impression</p>
+            <button class="btn-primary">
+                Start
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="question_container">
+        <div class="carousel">
+            <div class="slider">
+                <section >
+                    <form class="input_container" id="msform">
+                    <h2 class="fs-title">Personal Details</h2>
+                    <h3 class="fs-subtitle">Tell us something about you</h3>
+                    <input type="text" name="fname" placeholder="First Name"/>
+                    <input type="text" name="lname" placeholder="Company Name"/>
+                </form>
+                </section>
+                <section>
+                    <form>
+                        <h2 class="fs-title">Design Preference</h2>
+                        <h3 class="fs-subtitle">Tell us what you like</h3>
+
+                        <span class="theme-btn-container">
+                            <li><button class="dark-theme-btn theme-btn">Dark and Mysterious <span class="currentDark">(Current)</span></button></li>
+                            <li><button class="light-theme-btn theme-btn">Bright And Open <span class="currentBright">(Current)</span></button></li>
+                        </span>
+                    </form>
+                </section>
+                <section>
+                    <form class="input_container" id="msform">
+                        <h2 class="fs-title">Personal Details</h2>
+                        <h3 class="fs-subtitle">What's your Industry</h3>
+                        <input type="text" name="fname" placeholder="Industry"/>
+                    </form>
+                </section>
+                <section>
+                    <form class="input_container" id="msform">
+                        <h2 class="fs-title">Upload Design Pictures</h2>
+                        <h3 class="fs-subtitle">Do you want to upload picture files as design material?</h3>
+                        <input type="file" id="file" aria-label="File browser example">
+                        <button class="skip-btn">Skip</button>
+                    </form>
+                </section>
+                <section>
+                    
+                </section>
+                <section>
+                   
+                </section>
+                <section>
+                    
+                </section>
+            </div>
+            <div class="controls">
+                <div class="arrow left">
+                    <button>Back</button>
+                </div>
+                <div class="arrow right">
+                    <button>Next</button>
+                </div>
+
+                <ul>
+                    <li class="selected"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,349 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: montserrat, arial, verdana;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+}
+
+#main-header{
+    width: 100%;
+    padding: 10px 5%;
+    background-color: #333;
+}
+
+#main-header h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: #fff;
+}
+
+
+.question_container{
+    width: 50%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    
+}
+
+.carousel{
+    border: 1px solid #ccc;
+    height: 60vh;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.75);
+}
+
+.slider{
+    height: 100%;
+    display: flex;
+    width: 700%;
+    transition: all 0.3s;
+}
+
+.slider section{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls .arrow{
+    position: absolute;
+    top: 88%;
+    cursor: pointer;
+}
+
+.controls .arrow button{
+  appearance: button;
+  background-color: #ee0979;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue",sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color .13s ease-in-out,background .13s ease-in-out,opacity .13s ease-in-out,box-shadow .13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+
+.controls .arrow button:hover{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+}
+
+.controls .arrow button:active{
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+}
+
+.arrow.left{
+    left: 20px;
+    top: 20px;
+    display: none;
+}
+.arrow.right{
+    right: 10px;
+}
+
+.arrow.left button{
+    background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.arrow.left button:hover,
+.arrow.left button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.arrow.left button:active {
+  opacity: .5;
+}
+
+
+.controls ul{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    list-style: none;
+    display: flex;
+}
+
+.controls ul li{
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ee0979;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: #ee0979;
+    cursor: pointer;
+}
+
+.controls ul li.selected{
+    background-color: transparent;
+}
+
+#msform input{
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+
+.fs-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.theme-btn-container li{
+    list-style: none;
+}
+.dark-theme-btn {
+  appearance: none;
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.dark-theme-btn:disabled {
+  pointer-events: none;
+}
+
+.dark-theme-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.dark-theme-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.light-theme-btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: 10px;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.light-theme-btn:disabled {
+  pointer-events: none;
+}
+
+.light-theme-btn:hover {
+  transform: translateY(-2px);
+}
+
+.light-theme-btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.dark{
+    background-color: #000;
+}
+
+input[type="file"] {
+    font-size: 17px;
+    width: 350px !important;
+    color: #b8b8b8;
+    cursor: pointer;
+  }
+
+  .skip-btn{
+    display: block;
+    background: transparent;
+    border: 1px solid #333;
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .pay{
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background: transparent;
+    border: 1px solid #333;
+    width: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  @keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@media screen and (max-width: 1000px) {
+.arrow.left{
+    display: block;
+}
+.controls ul{
+    display: none;
+}
+
+.question_container{
+    width: 98%;
+}
+
+.carousel{
+    padding: 20px;
+}
+
+#msform input{
+    width: 90%;
+}
+}
