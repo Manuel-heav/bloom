@@ -5,14 +5,16 @@ const btnContainer = document.querySelectorAll(".theme-btn");
 const btnPrimary = document.querySelector(".btn-primary");
 const title = document.querySelectorAll(".fs-title");
 const subtitle = document.querySelectorAll(".fs-subtitle");
+const inputFile = document.querySelectorAll(".input-file");
+const skipBtn = document.querySelectorAll(".skip-btn");
 const skip = document.querySelector(".skip-btn");
+const pay = document.querySelector(".pay");
 const body = document.querySelector("body");
 const indicatorParents = document.querySelector(".controls ul");
 var index = 0;
 
 btnPrimary.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(123);
   document.querySelector(".container").style.display = "none";
   document.querySelector(".style_file").remove();
   document.querySelector(".carousel").style.animation =
@@ -22,14 +24,17 @@ btnPrimary.addEventListener("click", (e) => {
   document.querySelector(".question_container").style.display = "block";
 });
 
+pay.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".question_container").style.display = "none";
+  document.querySelector(".pricing_container").style.display = "block";
+});
 skip.addEventListener("click", (e) => {
   e.preventDefault();
   slider.style.transform = `translate(${4 * -14.2857142857}%)`;
   document.querySelector(".controls .selected").classList.remove("selected");
   indicatorParents.children[index].classList.add("selected");
 });
-
-document.querySelector(".currentDark").style.display = "none";
 
 document.querySelectorAll(".controls li").forEach((indicator, i) => {
   indicator.addEventListener("click", () => {
@@ -56,6 +61,9 @@ leftArrow.addEventListener("click", () => {
 });
 
 rightArrow.addEventListener("click", () => {
+  if (index === 5) {
+    rightArrow.style.display = "none";
+  }
   index = index < 6 ? index + 1 : 6;
   document.querySelector(".controls .selected").classList.remove("selected");
   indicatorParents.children[index].classList.add("selected");
@@ -76,10 +84,20 @@ btnContainer.forEach((btn) => {
         var currentEl = subtitle[i];
         currentEl.style.color = "white";
       }
+
+      for (var i = 0; i < skipBtn.length; i++) {
+        var currentEl = skipBtn[i];
+        currentEl.style.color = "#fff";
+      }
+
+      for (var i = 0; i < inputFile.length; i++) {
+        var currentEl = inputFile[i];
+        currentEl.style.color = "#fff";
+      }
+      document.querySelector("#main-header").style.backgroundColor = "#333";
+      document.querySelector(".logo").style.color = "#fff";
       document.querySelector(".light-theme-btn").style.backgroundColor = "#fff";
-      document.querySelector(".currentBright").style.display = "none";
-      document.querySelector(".currentDark").style.display = "block";
-      document.querySelector("#main-header").style.backgroundColor = "#000";
+      document.querySelector(".pay").style.color = "#fff";
     } else if (btn.className.includes("light-theme-btn")) {
       body.removeAttribute("class");
       body.classList.add("light");
@@ -92,8 +110,10 @@ btnContainer.forEach((btn) => {
         var currentEl = subtitle[i];
         currentEl.style.color = "inherit";
       }
-      document.querySelector(".currentDark").style.display = "none";
-      document.querySelector("#main-header").style.backgroundColor = "#333";
+
+      document.querySelector("#main-header").style.backgroundColor = "#E0DFD5";
+      document.querySelector(".logo").style.color = "#333";
+      document.querySelector(".skip-btn").style.color = "#fff";
     }
   });
 });
