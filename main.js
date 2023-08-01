@@ -22,6 +22,7 @@ btnPrimary.addEventListener("click", (e) => {
   document.querySelector(".carousel").style.animationIterationCount = "1";
   document.querySelector(".carousel").style.animationFillMode = "forwards";
   document.querySelector(".question_container").style.display = "block";
+  document.querySelector(".main_container").style.display = "none";
 });
 
 pay.addEventListener("click", (e) => {

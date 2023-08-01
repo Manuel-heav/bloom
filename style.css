@@ -133,6 +133,126 @@ section{
     cursor: pointer;
     color: #fff;
 }
+  
+  .section_container{
+    display: flex;
+    align-items: center;
+  }
+  .section_card_container{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+
+  figure.snip1218 {
+    margin: 10px;
+    max-width: 310px;
+    width: 100%;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+  }
+  figure.snip1218 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+  }
+  figure.snip1218 img {
+    width: 100%;
+    height: 300px;
+  }
+  figure.snip1218 .image {
+    z-index: 1;
+  }
+
+  figure.snip1218 figcaption {
+    background-color: #ffffff;
+    padding: 25px;
+  }
+  figure.snip1218 h3 {
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  figure.snip1218 h3 span {
+    font-weight: 800;
+  }
+  figure.snip1218 h5 {
+    margin: 0 0 15px;
+    font-weight: 400;
+  }
+  figure.snip1218 i {
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 24px;
+    color: #000000;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    background: white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+
+  .main_container h1{
+    margin: auto;
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+  }
+
+  .article_container p{
+    line-height: 2em;
+    color: #333;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+  }
+
+
+  .footer{
+    margin-top: 30px;
+    background:#333;
+    padding:30px 0px;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
 
 @media screen and (max-width: 1000px) {
 
@@ -166,6 +286,7 @@ section{
       transition: top 0.7s ease;
       display: none;
     }
+
     .closeMenu{
         display: block;
         position: absolute;
@@ -178,5 +299,29 @@ section{
 
     .openMenu{
         display: block;
+    }
+ 
+.footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    .section_card_container{
+        display: block;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .section_card_container{
+        display: block;
+        margin-left: 5%;
     }
 }
