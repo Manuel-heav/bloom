@@ -116,9 +116,6 @@ nav ul li a:hover{
     object-fit: cover;
 }
 
-section{
-    height: 100vh;
-}
 .openMenu{
     font-size: 25px;
     margin: 20px;
@@ -209,7 +206,7 @@ section{
   }
   
 
-  .main_container h1{
+  .header1{
     margin: auto;
     text-align: center;
     margin: 30px;
@@ -224,46 +221,96 @@ section{
     margin: auto;
   }
 
+  .section-1{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: auto;
+      line-height: 1.2;
+  }
+  
+  .section-1-text{
+      margin-top: 150px;
+  }
+  .section-1-text p{
+      font-size: 25px;
+      margin-bottom: 15px;
+  }
+  
+  .section-1-text h1{
+      font-size: 40px;
+      margin-bottom: 25px;
+  }
+  
+  .btn1{
+      background-color: #000;
+      color: #fff;
+      font-size: 19px;
+      padding: 16px;
+      border-radius: 5px;
+      margin: 15px 15px 15px 0;
+      cursor: pointer;
+      border: 1px solid #fff;
+      transition: .4s;
+  }
+  
+  .btn1:hover{
+      background-color: #333;
+  }
+  
+  .section-1-image img{
+    height: 500px;
+    transition: 0.5s;
+    border-radius: 10px;
+  }
 
-  .footer{
-    margin-top: 30px;
-    background:#333;
-    padding:30px 0px;
-    text-align:center;
-    }
-    
-    .footer .row{
-    width:100%;
-    margin:1% 0%;
-    padding:0.6% 0%;
-    color:gray;
-    font-size:0.8em;
-    }
-    
-    .footer .row a{
-    text-decoration:none;
-    color:gray;
-    transition:0.5s;
-    }
-    
-    .footer .row a:hover{
-    color:#fff;
-    }
-    
-    .footer .row ul{
-    width:100%;
-    }
-    
-    .footer .row ul li{
-    display:inline-block;
-    margin:0px 30px;
-    }
-    
-    .footer .row a i{
-    font-size:2em;
-    margin:0% 1%;
-    }
+  .section-2-image img{
+    height: 500px;
+    transition: 0.5s;
+    border-radius: 10px;
+  }
 
+  .section-1-image img:hover, .section-2-image img:hover{
+    cursor: pointer;
+    scale: 1.05;
+    box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 11px -8px rgba(0,0,0,0.75);
+  }
+  .section-1-image{
+      margin-top: 30px;
+  }
+  
+  .section-2{
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin: auto;
+      line-height: 1.2;
+  }
+  
+  .section-2-text{
+      margin-top: 150px;
+  }
+  
+  .section-2-text p{
+      font-size: 25px;
+      margin-bottom: 15px;
+  }
+  
+  .section-2-text h1{
+      font-size: 40px;
+      margin-bottom: 25px
+  }
+  
+  .section-2 .btn2{
+      margin: 15px 15px 15px 0;
+  }
+  .section-2-image{
+      margin-top: 30px;
+      margin-right: 100px;
+  }
+  
 @media screen and (max-width: 1000px) {
 
 #main-header{
@@ -310,19 +357,11 @@ section{
     .openMenu{
         display: block;
     }
+
+    .section-1-image, .section-2-image{
+      display: none;
+  }
  
-.footer{
-    text-align:left;
-    padding:5%;
-    }
-    .footer .row ul li{
-    display:block;
-    margin:10px 0px;
-    text-align:left;
-    }
-    .footer .row a i{
-    margin:0% 3%;
-    }
     .section_card_container{
         display: block;
         margin-left: 10%;
