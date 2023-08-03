@@ -311,8 +311,205 @@ nav ul li a:hover{
       margin-right: 100px;
   }
   
+
+  .vertical_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    line-height: 0;
+  }
+  
+  .thumbnails li {
+    flex: auto; 
+    list-style: none;
+    transition: 0.5s;
+    margin-bottom: 2px;
+  }
+  .thumbnails li:hover{
+    scale: 1.05;
+  }
+  
+  .thumbnails  a {
+    display: block;
+  }
+
+  .thumbnails img {
+    width: 30vmin;
+    height: 16vmin;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px;
+  }
+  
+  .slides {
+    overflow: hidden;
+    width: 60vmin;
+    height: 80vmin;
+  }
+
+  .slides  li {
+    list-style: none;
+    width: 75vmin;
+    height: 80vmin;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .slides img {
+    height: 80vmin;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+  }
+  
+  .slides li:target {
+    z-index: 3;
+    -webkit-animation: slide 0s 1;
+  }
+
+
+  .slides li:not(:target) {
+    -webkit-animation: hidden 0s 1;
+  }
+
+  .infinite_container {
+    overflow: hidden;
+    display: flex;
+    height: 500px;
+    width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .infinite_container div {
+    height: 400px;
+    margin-left: 50px;
+    min-width: 300px;
+    margin-top: 80px;
+    animation: Infiniteslide 10s linear infinite;
+  }
+  
+  .pink img{
+    background-color: pink;
+    height: 400px;
+  }
+  
+  .blue img{
+    background-color: blue;
+    height: 400px;
+  }
+  
+  .yellow img{
+    background-color: yellow;
+    height: 400px;
+  }
+  
+  .orange img{
+    background-color: orange;
+    height: 400px;
+  }
+  
+  .purple img{
+    background-color: purple;
+    height: 400px;
+  }
+  
+  .aqua img{
+    background-color: aqua;
+    height: 400px;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+
+  @keyframes Infiniteslide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-800px, 0, 0); /* The image width */
+    }
+  }
+  
+  @keyframes hidden {
+    0% {
+      z-index: 2;
+    }
+    100% {
+      z-index: 2;
+    }
+  }
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  position: relative;
+  flex-basis: 50%; /* Adjust this value to control the width of each image-box */
+  transition: 3s;
+  cursor: pointer;
+}
+
+.image-box:hover{
+  scale: 1.06;
+}
+
+.image-container img {
+  width: 100%;
+  height: 500px;
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-align: center;
+  color: #fff; /* Text color for the image text */
+  font-size: 18px;
+  padding: 10px 20px;
+  border-bottom-left-radius: 8px; /* Optionally add rounded corners to the text box */
+  border-bottom-right-radius: 8px;
+}
+
+.image-text *{
+  margin-bottom: 20px;
+}
+
+.image-text p{
+  color: #ccc;
+  font-size: 16px;
+}
+
+.image-text h1{
+  text-transform: uppercase;
+}
+
+.image-text a{
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
 @media screen and (max-width: 1000px) {
 
+.image-container {
+  display: block;
+}
 #main-header{
     padding: 10px 3%;
 }
