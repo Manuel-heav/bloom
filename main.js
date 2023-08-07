@@ -76,29 +76,30 @@ btnContainer.forEach((btn) => {
     e.preventDefault();
     if (btn.className.includes("dark-theme-btn")) {
       body.removeAttribute("class");
-      body.classList.add("dark");
+      // body.classList.add("dark");
       for (var i = 0; i < title.length; i++) {
         var currentEl = title[i];
-        currentEl.style.color = "white";
+        // currentEl.style.color = "white";
       }
       for (var i = 0; i < subtitle.length; i++) {
         var currentEl = subtitle[i];
-        currentEl.style.color = "white";
+        // currentEl.style.color = "white";
       }
 
       for (var i = 0; i < skipBtn.length; i++) {
         var currentEl = skipBtn[i];
-        currentEl.style.color = "#fff";
+        // currentEl.style.color = "#fff";
       }
 
       for (var i = 0; i < inputFile.length; i++) {
         var currentEl = inputFile[i];
-        currentEl.style.color = "#fff";
+        // currentEl.style.color = "#fff";
       }
       document.querySelector("#main-header").style.backgroundColor = "#333";
+      document.querySelector(".footer").style.backgroundColor = "#333";
       document.querySelector(".logo").style.color = "#fff";
       document.querySelector(".light-theme-btn").style.backgroundColor = "#fff";
-      document.querySelector(".pay").style.color = "#fff";
+      // document.querySelector(".pay").style.color = "#fff";
     } else if (btn.className.includes("light-theme-btn")) {
       body.removeAttribute("class");
       body.classList.add("light");
@@ -112,7 +113,8 @@ btnContainer.forEach((btn) => {
         currentEl.style.color = "inherit";
       }
 
-      document.querySelector("#main-header").style.backgroundColor = "#E0DFD5";
+      document.querySelector("#main-header").style.backgroundColor = "#D1E3DE";
+      document.querySelector(".footer").style.backgroundColor = "#D1E3DE";
       document.querySelector(".logo").style.color = "#333";
       document.querySelector(".skip-btn").style.color = "#fff";
     }

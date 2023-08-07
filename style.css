@@ -329,10 +329,7 @@ nav ul li a:hover{
     flex: auto; 
     list-style: none;
     transition: 0.5s;
-    margin-bottom: 2px;
-  }
-  .thumbnails li:hover{
-    scale: 1.05;
+    margin-bottom: 10px;
   }
   
   .thumbnails  a {
@@ -350,7 +347,7 @@ nav ul li a:hover{
   .slides {
     overflow: hidden;
     width: 60vmin;
-    height: 80vmin;
+    height: 83vmin;
   }
 
   .slides  li {
@@ -378,7 +375,7 @@ nav ul li a:hover{
     -webkit-animation: hidden 0s 1;
   }
 
-  .infinite_container {
+  /* .infinite_container {
     overflow: hidden;
     display: flex;
     height: 500px;
@@ -431,25 +428,24 @@ nav ul li a:hover{
     100% {
       transform: translateY(0%);
     }
-  }
+  } */
 
-  @keyframes Infiniteslide {
+  /* @keyframes Infiniteslide {
     0% {
       transform: translate3d(0, 0, 0);
     }
     100% {
       transform: translate3d(-800px, 0, 0); /* The image width */
-    }
-  }
+
   
-  @keyframes hidden {
+  /* @keyframes hidden {
     0% {
       z-index: 2;
     }
     100% {
       z-index: 2;
     }
-  }
+  }  */
 
 .image-container {
   display: flex;
@@ -457,14 +453,15 @@ nav ul li a:hover{
 }
 
 .image-box {
+  margin: 10px;
   position: relative;
-  flex-basis: 50%; /* Adjust this value to control the width of each image-box */
+  flex-basis: 47%; 
   transition: 3s;
   cursor: pointer;
 }
 
 .image-box:hover{
-  scale: 1.06;
+  scale: 1.04;
 }
 
 .image-container img {
@@ -503,6 +500,43 @@ nav ul li a:hover{
 .image-text a{
   border: 1px solid #fff;
   padding: 10px;
+}
+
+.infinite-slider{
+  height: 350px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.slide-track{
+  display: flex;
+  width: calc(250px * 12);
+  animation: infinite-scroll 10s linear infinite;
+}
+
+.infinite-slide{
+  height: 400px;
+  width: 250px;
+  align-items: center;
+  padding: 15px
+}
+
+.infinite-slide img{
+  width: 100%;
+}
+
+@keyframes infinite-scroll{
+  0%{
+    transform: translateX(0);
+  }
+
+  100%{
+    transform: translateX(calc(-250px * 6));
+  }
 }
 
 @media screen and (max-width: 1000px) {
