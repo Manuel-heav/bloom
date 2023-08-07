@@ -318,7 +318,30 @@ nav ul li a:hover{
     margin-top: 70px;
     margin-bottom: 70px;
   }
-  
+
+  .main_slide img{
+    height: 550px;
+    border-radius: 10px;
+  }
+
+  .main_slide{
+    margin-right: 20px;
+  }
+
+  .thumbnail img{
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+    opacity: .8;
+    border-radius: 5px;
+  }
+
+  .thumbnail img:hover{
+    opacity: 1;
+  }
+ 
   .thumbnails {
     display: flex;
     flex-direction: column;
@@ -540,6 +563,22 @@ nav ul li a:hover{
 }
 
 @media screen and (max-width: 1000px) {
+
+  .main_slide img{
+    height: 400px;
+    width: 250px;
+  }
+
+  .main_slide{
+    margin-right: 20px;
+  }
+
+  .thumbnail img{
+    height: 80px;
+    margin: 10px 0;
+    cursor: pointer;
+    display: block;
+  }
 
 .image-container {
   display: block;

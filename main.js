@@ -13,6 +13,11 @@ const body = document.querySelector("body");
 const indicatorParents = document.querySelector(".controls ul");
 var index = 0;
 
+function myFunction(smallImg) {
+  var fullImg = document.getElementById("main_slide_img");
+  fullImg.src = smallImg.src;
+}
+
 btnPrimary.addEventListener("click", (e) => {
   e.preventDefault();
   document.querySelector(".container").style.display = "none";
