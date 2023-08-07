@@ -16,13 +16,13 @@ var index = 0;
 btnPrimary.addEventListener("click", (e) => {
   e.preventDefault();
   document.querySelector(".container").style.display = "none";
-  document.querySelector(".style_file").remove();
+  // document.querySelector(".style_file").remove();
   document.querySelector(".carousel").style.animation =
     "fadeInAnimation ease 2s";
   document.querySelector(".carousel").style.animationIterationCount = "1";
   document.querySelector(".carousel").style.animationFillMode = "forwards";
   document.querySelector(".question_container").style.display = "block";
-  document.querySelector(".main_container").style.display = "none";
+  // document.querySelector(".main_container").style.display = "none";
 });
 
 pay.addEventListener("click", (e) => {
